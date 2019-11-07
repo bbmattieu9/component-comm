@@ -2,8 +2,8 @@
   <div class="row">
     <div class="col-md-6 offset-md-3"> 
       <h1>tizi toDo App</h1>
-      <app-active [completedList]="completed"></app-active>
-      <app-completed (completed)="onCompleted($event)"></app-completed>
+      <app-active [completedList]="completed" (active)="onActive($event)"></app-active>
+      <app-completed [activeList]="active" (completed)="onCompleted($event)"></app-completed>
     </div>
   </div>
 </div>

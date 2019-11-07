@@ -7,9 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  completed = 'data from parent component';
+  completed;
+  active;
 
   onCompleted(item) {
     this.completed = item;
+  }
+
+  onActive(item) {
+    this.active = item;
   }
 }

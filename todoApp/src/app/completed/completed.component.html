@@ -3,7 +3,7 @@
 <ul class="list-group" *ngFor="let myList of completedList; let i = index">
         <li class="list-group-item">{{ myList }}
             <div class="action">
-                <span><i class="fa fa-check-circle px-2" aria-hidden="true"
+                <span><i class="fa fa-plus px-2" aria-hidden="true"
                 (click)="onAdd(i)"></i></span>
                 <span>
                     <i class="fa fa-trash px-2" aria-hidden="true" (click)="onDelete(i)"></i>

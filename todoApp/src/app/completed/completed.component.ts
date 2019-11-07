@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-completed',
@@ -7,6 +7,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class CompletedComponent implements OnInit {
 
+  @Input() activeList;
   completedList =  ['Gym', 'Cook', 'Scrub Feet'];
   @Output() completed = new EventEmitter<any>();
 
@@ -16,5 +17,15 @@ export class CompletedComponent implements OnInit {
   ngOnInit() {
     this.completed.emit(this.completedList);
   }
+
+
+  onAdd(i) {
+    let removedItem = this.completedList.splice(i, 1);
+    this.activeList.push(removedItem);
+  }
+
+  onDelete(i) {
+    this.completedList.splice(i, 1);
+   }
 
 }
