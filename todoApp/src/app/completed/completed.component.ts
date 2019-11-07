@@ -10,6 +10,8 @@ export class CompletedComponent implements OnInit {
   @Input() activeList;
   completedList =  ['Gym', 'Cook', 'Scrub Feet'];
   @Output() completed = new EventEmitter<any>();
+  toggle = false;
+  icon = 'fa fa-caret-down';
 
 
   constructor() { }
@@ -27,5 +29,11 @@ export class CompletedComponent implements OnInit {
   onDelete(i) {
     this.completedList.splice(i, 1);
    }
+
+   toggler() {
+     this.toggle = !this.toggle;
+
+     (this.toggle) ? this.icon =  'fa fa-caret-up' : this.icon = 'fa fa-caret-down';
+       }
 
 }

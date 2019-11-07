@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ActiveComponent implements OnInit {
 
-  activeList = ['Pray', 'Read', 'Work'];
+  activeList = [];
   @Input() completedList;
 
   constructor() { }
@@ -19,9 +19,17 @@ export class ActiveComponent implements OnInit {
     this.activeList.splice(i, 1);
   }
 
-  onCheckOff(itemIndex) {
+  onCheckOff(itemIndex: number) {
     let removedItem = this.activeList.splice(itemIndex, 1);
     this.completedList.push(removedItem);
+  }
+
+  onAdd(item) {
+    this.activeList.push(item);
+  }
+
+  onEdit(itemIndex) {
+    
   }
 
 }
