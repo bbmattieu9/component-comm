@@ -1,0 +1,25 @@
+li {
+    position: relative;
+    font-weight: bolder;
+}
+
+li:hover .action {
+    display: block;
+}
+
+.action {
+    display: none;
+    position: absolute;
+    top:0;
+    right: 0;
+    height: 100%;
+    padding: 10px;
+}
+
+.fa-trash {
+    color: red;
+}
+
+.fa-check-circle {
+    color:  green;
+}

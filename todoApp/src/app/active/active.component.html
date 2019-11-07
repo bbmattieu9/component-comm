@@ -1,1 +1,11 @@
-<p>active works!</p>
+<ul class="list-group" *ngFor="let myList of activeList; let i = index">
+    <li class="list-group-item">{{ myList }}
+        <div class="action">
+            <span><i class="fa fa-check-circle px-2" aria-hidden="true"
+            (click)="onCheckOff(i)"></i></span>
+            <span>
+                <i class="fa fa-trash px-2" aria-hidden="true" (click)="onDelete(i)"></i>
+            </span>
+        </div>
+    </li>
+</ul>
