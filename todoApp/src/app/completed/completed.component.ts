@@ -8,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class CompletedComponent implements OnInit {
 
   @Input() activeList;
-  completedList =  ['Gym', 'Cook', 'Scrub Feet'];
+  completedList =  [];
   @Output() completed = new EventEmitter<any>();
   toggle = false;
   icon = 'fa fa-caret-down';
